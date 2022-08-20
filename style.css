@@ -1,0 +1,236 @@
+html {
+    box-sizing: border-box;
+    background-color: #d8d8d8;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100vw;
+}
+
+.item {
+    width: 60vw;
+    max-width: 600px;
+    background-color: #ffffff;
+    height: 800px;
+    margin-bottom: 10vh;
+    border-radius: 6%;
+    position: relative;
+    animation: unhoverItem 0.3s 1 normal forwards;
+}
+
+.item-bottom {
+    position: absolute;
+    width: 60vw;
+    max-width: 600px;
+    bottom: 0;
+    padding-bottom: 5%;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 5%;
+    align-self: flex-end;
+    padding-bottom: 3%;
+}
+
+.price-container {
+    display: flex;
+}
+
+.button-container {
+    width: 100%;
+    height: 60px;
+    padding-left: 5%;
+}
+
+.button {
+    width: 90%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Book Antiqua", serif;
+    font-weight: bold;
+    background-color: #FFF5FA;
+    color: #FF1D89;
+}
+
+.title-container {
+    width: 100%;
+    justify-content: left;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.title-text {
+    font-weight: bold;
+    padding-top: 1%;
+    font-size: 80px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.icon-title {
+    height: 80px;
+    vertical-align: middle;
+}
+
+.itext-container {
+    width: 100%;
+    justify-content: left;
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2%;
+}
+
+.checked-icon {
+    vertical-align: middle;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.checked-text {
+    font-weight: bold;
+    padding-top: 1%;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.checked-list {
+    margin-top: 5%;
+    border-bottom: dashed black;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+}
+
+.subtitle {
+    color: rgba(111, 111, 111, 0.66);
+    font-size: 25px;
+}
+
+.subtitle-container {
+    padding: 3% 0 0 6%;
+}
+
+.item:hover {
+    background-color: #0B0641;
+    animation: hoverItem 0.3s 1 normal forwards;
+}
+
+.item:hover .title-text {
+    color: white;
+}
+
+.item:hover .checked-icon {
+    filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(147deg) brightness(110%) contrast(87%);
+    -webkit-filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(147deg) brightness(110%) contrast(87%);
+}
+
+.checked-icon {
+    -webkit-filter: invert(0%) sepia(100%) saturate(7443%) hue-rotate(151deg) brightness(78%) contrast(113%);;
+    filter: invert(0%) sepia(100%) saturate(7443%) hue-rotate(151deg) brightness(78%) contrast(113%);;
+}
+
+.item:hover .icon-title {
+    filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(147deg) brightness(110%) contrast(87%);
+    -webkit-filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(147deg) brightness(110%) contrast(87%);
+}
+
+.icon-title {
+    -webkit-filter: invert(0%) sepia(100%) saturate(7443%) hue-rotate(151deg) brightness(78%) contrast(113%);;
+    filter: invert(0%) sepia(100%) saturate(7443%) hue-rotate(151deg) brightness(78%) contrast(113%);;
+}
+
+.item:hover .checked-text {
+    color: white;
+}
+
+.item:hover .button {
+    background-color: #FF1D89;
+    color: #FFF5FA;
+}
+
+.item:hover .checked-list {
+    border-color: white;
+}
+
+.item:hover .price {
+    color: white;
+}
+
+@keyframes hoverItem {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-10%);
+    }
+
+}
+
+@keyframes unhoverItem {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
+}
+
+
+@media screen and (min-width: 1500px) {
+    .container {
+        margin-top: 0;
+        grid-template-columns: 25vw 25vw 25vw;
+        gap: 5vw;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .item-bottom {
+        width: 25vw;
+        max-width: 450px;
+    }
+
+    .item {
+        height: 600px;
+        max-width: 450px;
+        width: 25vw;
+    }
+
+    .icon-title {
+        height: 50px;
+    }
+
+    .title-text {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .item {
+        margin-bottom: 5vh;
+    }
+}
