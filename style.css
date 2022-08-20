@@ -23,7 +23,6 @@ body {
 .item {
     width: 60vw;
     max-width: 600px;
-    background-color: #ffffff;
     height: 800px;
     margin-bottom: 10vh;
     border-radius: 6%;
@@ -132,7 +131,6 @@ body {
 }
 
 .item:hover {
-    background-color: #0B0641;
     animation: hoverItem 0.3s 1 normal forwards;
 }
 
@@ -180,10 +178,12 @@ body {
 @keyframes hoverItem {
     0% {
         transform: translateY(0%);
+        background-color: #ffffff;
     }
 
     100% {
         transform: translateY(-10%);
+        background-color: #0B0641;
     }
 
 }
@@ -191,10 +191,12 @@ body {
 @keyframes unhoverItem {
     0% {
         transform: translateY(-10%);
+        background-color: #0B0641;
     }
 
     100% {
         transform: translateY(0%);
+        background-color: #ffffff;
     }
 
 }
